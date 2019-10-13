@@ -6,20 +6,22 @@ package com.itechart.lesson2;
  */
 public class Task1 {
     public static void main(String[] args) {
-        int  c= 5;
-        double[] list = new double[c];
-        for (int i = 0; i < list.length; i++) {
+        int  s= 5;
+        double[] list = new double[s];
+        for (int i = 0; i < s; ++i) {
             list[i] = Math.random(); //рандомное значение
         }
         double max = list[0];
         double min = list[0];
         double avg = 0;
-        for (int i = 0; i < list.length; i++) {
-            if (max < list[i])
+        for (int i = 0; i < s; ++i) {
+            if (max < list[i]) {
                 max = list[i];
-            if (min > list[i])
+            }
+            if (min > list[i]) {
                 min = list[i];
-            avg += list[i] / list.length;
+            }
+            avg += list[i] / s;
         }
         System.out.println("Максимальный элемент: " + max);
         System.out.println("Минимальное элемент: " + min);
