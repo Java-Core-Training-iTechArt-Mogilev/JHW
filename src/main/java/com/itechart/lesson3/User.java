@@ -1,4 +1,4 @@
-package com.itechart.lesson3;
+package lesson3;
 
 class User {
     private String name;
@@ -9,29 +9,25 @@ class User {
         account = new Account();
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getNme() {
+    String getName() {
         return name;
     }
 
-    public int getBalance(String currency) {
+    int getBalance(String currency) {
         if (account == null) {
             return 0;
         }
         return account.getBalance(currency);
     }
 
-    public void addToBalance(int amount, String currency) {
+    void addToBalance(int amount, String currency) {
         if (account == null) {
             return;
         }
         account.addToBalance(amount, currency);
     }
 
-    public int removeFromBalance(int amount, String currency) {
+    int removeFromBalance(int amount, String currency) {
         if (account == null) {
             return 0;
         }

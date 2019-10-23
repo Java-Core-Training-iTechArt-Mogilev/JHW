@@ -1,4 +1,4 @@
-package com.itechart.lesson3;
+package lesson3;
 
 class Account {
     private int id;
@@ -12,9 +12,10 @@ class Account {
                 new Bill("EURO") };
     }
 
-    public int getId() { return id; }
+    public int getId() {
+        return id; }
 
-    public int getBalance(String currency) {
+    int getBalance(String currency) {
         for (Bill bill : bills) {
             if (bill.getCurrency() == currency) {
                 return bill.getBalance();
@@ -24,21 +25,20 @@ class Account {
         return i;
     }
 
-    public void addToBalance(int amount, String currency) {
+    void addToBalance(int amount, String currency) {
         for (Bill bill : bills) {
             if (bill.getCurrency() == currency) {
                 bill.addToBalance(amount);
-                return;
+                break;
             }
         }
     }
 
-    public int removeFromBalance(int amount, String currency) {
-        for (Bill bill : bills) {
+    int removeFromBalance(int amount, String currency) {
+        for (Bill bill : bills)
             if (bill.getCurrency() == currency) {
                 return bill.removeFromBalance(amount);
             }
-        }
         return 0;
     }
 }

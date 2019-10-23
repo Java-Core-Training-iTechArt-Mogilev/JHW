@@ -1,4 +1,4 @@
-package com.itechart.lesson3;
+package lesson3;
 
 class Bill {
     private int balance;
@@ -9,22 +9,22 @@ class Bill {
         this.currency = currency;
     }
 
-    public int getBalance() {
+    int getBalance() {
         return balance;
     }
 
-    public String getCurrency() {
+    String getCurrency() {
         return currency;
     }
 
-    public void addToBalance(int value) {
+    void addToBalance(int value) {
         balance += value;
         if (balance < 0) {
             balance = 0;
         }
     }
 
-    public int removeFromBalance (int value) {
+    int removeFromBalance(int value) {
         int oldBalance = balance;
         balance -= value;
         if (balance < 0) {
